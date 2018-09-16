@@ -1,2 +1,11 @@
-# flask_todos
-A Todos WebApp built with Flask in Python
+# Todos WebApp
+This is a Todos Webapp built in Flask, currently with no user system, and no database, only json files.
+
+## Installation
+```
+git clone https://github.com/sggts04/flask_todos
+cd flask_todos
+pip install flask
+python app.py
+```
+The site will be available on http://127.0.0.1:5000/ then.
