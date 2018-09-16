@@ -1,5 +1,5 @@
 # Todos WebApp
-This is a Todos Webapp built in Flask, currently with no user system, and no database, only json files.
+This is a Todos WebApp built in Flask, currently with no user system, and no database, only json files.
 
 ## Installation
 ```
