@@ -1,0 +1,74 @@
+{
+    "Wave Optics": [
+        "Not Done",
+        "06-09-2018",
+        "Have to complete Assignment",
+        ""
+    ],
+    "Computer Science Prep": [
+        "Not Done",
+        "12-09-2018",
+        "Study for Half Yearly",
+        ""
+    ],
+    "P-Block Completion": [
+        "Not Done",
+        "16-09-2018",
+        "Study for Half Yearly and AIATS",
+        ""
+    ],
+    "Vectors and 3D": [
+        "Done",
+        "16-09-2018",
+        "Complete Exercises and Assignment",
+        "16-09-2018"
+    ],
+    "Halo-Alkanes": [
+        "Not Done",
+        "16-09-2018",
+        "Understand and Solve Questions",
+        ""
+    ],
+    "Ray Optics": [
+        "Not Done",
+        "16-09-2018",
+        "Complete Assignment",
+        ""
+    ],
+    "Make Todo App": [
+        "Done",
+        "15-09-2018",
+        "Try to make a Todo App with Flask",
+        "16-09-2018"
+    ],
+    "Make Youtube Video": [
+        "Not Done",
+        "16-09-2018",
+        "Video for TODO Flask App",
+        ""
+    ],
+    "English": [
+        "Done",
+        "14-09-2018",
+        "Don't Study English",
+        "16-09-2018"
+    ],
+    "Make Login System": [
+        "Done",
+        "16-09-2018",
+        "Make a Login System for Todo App",
+        "16-09-2018"
+    ],
+    "Make a new Flask App": [
+        "Done",
+        "16-09-2018",
+        "Make a new flask app that has a login system",
+        "16-09-2018"
+    ],
+    "Hello": [
+        "Done",
+        "16-09-2018",
+        "This is a test",
+        "16-09-2018"
+    ]
+}
