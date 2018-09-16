@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Todo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="https://cdn1.iconfinder.com/data/icons/hawcons/32/698913-icon-81-document-add-128.png" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+       $(function() {
+               $("#datepicker").datepicker({ dateFormat: "dd-mm-yy" }).val()
+       });
+  </script>
+<style type="text/css">
+.card {
+	width: 500px;
+	margin-top: 90px;
+}
+.but {
+	border: none;
+	border: solid 0.7px #bdc3c7;
+	border-radius: 0.4px; 
+	height: 30px;
+}
+</style>
+</head>
+<body>
+<center>
+<div class="card">
+<div class="card-header">Add Todo</div>
+<div class="card-body">
+<img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698913-icon-81-document-add-128.png"><br><br>
+<form action="{{ url_for('addtodo') }}" method="post">
+	<input type="text" size="40" class="but" autocomplete="off" placeholder=" Title of Todo" name="title"></input>
+	<br><br>
+	<input type="text" size="40" class="but" autocomplete="off" placeholder=" Description of Todo" name="desc"></input>
+	<br><br>
+	<input type="text" size="40" id="datepicker" autocomplete="off" placeholder=" Today's Date" name="date"></input>
+	<br><br>
+	<input type="submit" value="Add" class="btn btn-primary"></input>
+</form>
+</div>
+</div>
+</center>
+</body>
+</html>
