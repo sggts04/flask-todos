@@ -9,7 +9,7 @@ pip install flask
 python app.py
 ```
 The site will be available on http://127.0.0.1:5000/ then.    
-Delete all content of the json file except a ```{ }``` to start of fresh.
+Delete all content of the json file except a ```{ }``` to start off fresh.
 ## Example
 A live example of this is running on http://sggts04.pythonanywhere.com/   
 A video demonstrating(an older version) this app: https://www.youtube.com/watch?v=Ecf2_Wc0SxI    
