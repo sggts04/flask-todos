@@ -20,7 +20,7 @@ def update():
 	global todos
 	id = request.form['id']
 	todos[id][0] = "Done"
-	todos[id][3] = datetime.datetime.today().strftime('%d-%m-%Y')
+	todos[id][4] = datetime.datetime.today().strftime('%d-%m-%Y')
 	file = open('todos.json', 'w')
 	json.dump(todos, file, indent=4)
 	file.close()
@@ -35,12 +35,17 @@ def addtodo():
 	global todos
 	title = request.form['title']
 	desc = request.form['desc']
-	date = request.form['date']
-	todos.update({title: ["Not Done", date, desc, ""]})
+	comdate = request.form['comdate']
+	date = datetime.datetime.today().strftime('%d-%m-%Y')
+	todos.update({title: ["Not Done", desc, date, comdate, ""]})
 	file = open('todos.json', 'w')
 	json.dump(todos, file, indent=4)
 	file.close()	
 	return redirect('/')
 
+@app.route('/login')
+def login():
+	return render_template('login.html')
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
