@@ -6,7 +6,7 @@ from passlib.hash import pbkdf2_sha256
 now = datetime.datetime.now()
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "d18004da279cd2af23c6a64dc8aba782371ae72f1952f3f1"
+app.config['SECRET_KEY'] = "secret_key_here"
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 file = open('todos.json')
 todos = json.load(file)
@@ -146,4 +146,4 @@ def apidoc():
 	return render_template('apidoc.html')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
