@@ -8,6 +8,7 @@ For testing, editing or playing around with the code, you can download the app t
 git clone https://github.com/sggts04/flask_todos
 cd flask_todos
 pip install flask
+pip install passlib
 python app.py
 ```
 The app will be available on http://127.0.0.1:5000/ then. However, the live site is [here](http://sggts04.pythonanywhere.com/) which you can't edit :)    
