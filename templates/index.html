@@ -73,7 +73,18 @@ h3 {
 </style>
 </head>
 <body>
-<a href="/add"><button type="button" class="btn btn-info add">Add Todo</button></a>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <div class="alert alert-light flashes" role="alert">
+    {% for message in messages %}
+      {{ message }}
+    {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+<a href="{{ url_for('add') }}"><button type="button" class="btn btn-success add">Add Todo</button></a>
+<a href="{{ url_for('logout') }}"><button type="button" class="btn btn-danger add">Logout</button></a>
+<a href="{{ url_for('apidoc') }}"><button type="button" class="btn btn-info add">Todos WebApp API</button></a>
 <br>
 <h3><small class="text-muted">Unfinished</small></h3>
 <div class="grid-container">

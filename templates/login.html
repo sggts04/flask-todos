@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="shortcut icon" type="image/png" href="https://cdn2.iconfinder.com/data/icons/miscellaneous-31/60/notepad-128.png" />
+<style type="text/css">
+.card {
+	width: 400px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	margin-top: 70px;
+}
+.but {
+	border: solid 0.7px #bdc3c7;
+	border-radius: 0.4px; 
+	height: 30px;
+	width: 250px;
+}
+</style>
+</head>
+<body>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+      var messages = {{ messages | safe }};
+      for (var i=0; i<messages.length; i++) {
+        alert(messages[i]);
+      }
+    </script>
+  {% endif %}
+{% endwith %}
+<center>
+	<div class="card">
+		<div class="card-header">
+			Login
+		</div>
+		<div class="card-text">
+			<form method="post" action="{{ url_for('loginattempt') }}">
+			<br><br>
+				<input type="text" name="loginid" autocomplete="off" placeholder=" Username" class="but"></input>
+				<br><br>
+				<input type="password" name="loginpass" autocomplete="off" placeholder=" Password" class="but"></input>
+				<br><br>
+				<input type="submit" class="btn btn-primary" value="Login"></input>
+			</form>
+			<br>
+		</div>
+	</div>
+	<br><br>
+	<h5>Don't have an account? <a href="{{ url_for('register') }}">Register</a></h5>
+</center>
+</body>
+</html>

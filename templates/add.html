@@ -19,25 +19,35 @@
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .but {
-	border: none;
-	border: solid 0.7px #bdc3c7;
-	border-radius: 0.4px; 
-	height: 30px;
+  border: solid 0.7px #bdc3c7;
+  border-radius: 0.4px; 
+  height: 30px;
+  width: 250px;
 }
 </style>
 </head>
 <body>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+      var messages = {{ messages | safe }};
+      for (var i=0; i<messages.length; i++) {
+        alert(messages[i]);
+      }
+    </script>
+  {% endif %}
+{% endwith %}
 <center>
 <div class="card">
 <div class="card-header">Add Todo</div>
 <div class="card-body">
 <img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698913-icon-81-document-add-128.png"><br><br>
 <form action="{{ url_for('addtodo') }}" method="post">
-	<input type="text" size="40" class="but" autocomplete="off" placeholder=" Title of Todo" name="title"></input>
+	<input type="text" class="but" autocomplete="off" placeholder=" Title of Todo" name="title"></input>
 	<br><br>
-	<input type="text" size="40" class="but" autocomplete="off" placeholder=" Description of Todo" name="desc"></input>
+	<input type="text" class="but" autocomplete="off" placeholder=" Description of Todo" name="desc"></input>
 	<br><br>
-	<input type="text" size="40" id="datepicker" autocomplete="off" placeholder=" To Be Completed By" name="comdate"></input>
+	<input type="text" class="but" id="datepicker" autocomplete="off" readonly="readonly" placeholder=" To Be Completed By" name="comdate"></input>
 	<br><br> 
 	<input type="submit" value="Add" class="btn btn-primary"></input>
 </form>
