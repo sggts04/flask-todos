@@ -14,6 +14,7 @@ Then run
 ```
 python app.py
 ```
-The app will be available on http://127.0.0.1:5000/ then. However, the live site is [here](http://sggts04.pythonanywhere.com/) which you can't edit :)    
+or ```python3 app.py``` or ```python3.7 app.py``` depending on how python is set up on your machine, please note that this is built in Python 3.7
+Then the app will be available on http://127.0.0.1:5000/ then. However, the live site is [here](http://sggts04.pythonanywhere.com/) which you can't edit :)    
 ## Video
 A video demonstrating(an older version) this app: https://www.youtube.com/watch?v=Ecf2_Wc0SxI    
