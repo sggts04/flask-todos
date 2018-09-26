@@ -9,7 +9,7 @@ git clone https://github.com/sggts04/flask_todos
 cd flask_todos
 pip install -r requirements.txt
 ```
-Now, edit app.py and set ```app.config['SECRET_KEY'] = "secret_key_here"``` to your own secret key instead of ```secret_key_here```.
+Now, edit app.py and set ```app.config['SECRET_KEY'] = "secret_key_here"``` to your own secret key instead of ```secret_key_here```.    
 Then run
 ```
 python app.py
