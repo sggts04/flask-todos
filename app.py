@@ -145,6 +145,12 @@ def api():
 def apidoc():
 	return render_template('apidoc.html')
 
+@app.route('/profile')
+def profileredirect():
+	if not session.get('logged_in'):
+		return redirect('/')
+	return redirect('/profile/'+session['username'])
+
 @app.route('/profile/<user>')
 def profile(user):
 	if not user in users:
