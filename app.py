@@ -145,5 +145,30 @@ def api():
 def apidoc():
 	return render_template('apidoc.html')
 
+@app.route('/profile/<user>')
+def profile(user):
+	if not user in users:
+		return render_template('nouser.html')
+	todolen = len(todos[user])
+	len1=0
+	for todoname in todos[user]:
+		if todos[user][todoname][0]=="Not Done":
+			len1+=1
+	return render_template('profile.html', user = user, todolen = todolen, todolennd = len1, todolend = todolen-len1)
+
+#Errors
+
+@app.errorhandler(403)
+def page_not_found(e):
+    return render_template('403.html'), 403
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+@app.errorhandler(500)
+def page_not_found(e):
+    return render_template('500.html'), 500
+
 if __name__ == "__main__":
     app.run()
