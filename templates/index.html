@@ -52,6 +52,10 @@ h3 {
 	margin-left: 30px;
 	margin-top: 10px;
 }
+h4 {
+	margin-left: 40px;
+	margin-top: 10px;
+}
 @media (min-width: 820px) and (max-width: 1220px) {
 .grid-container {
 	grid-template-columns: auto auto;
@@ -112,6 +116,8 @@ h3 {
 	</div></center>
 	</div></center>
 {% endif %}
+{% else %}
+<h4><small class="text-muted">No Unfinished Todos</small></h4>
 {% endfor %}
 </div>
 <h3><small class="text-muted">Finished</small></h3>
@@ -137,6 +143,8 @@ h3 {
 	</div></center>
 	</div></center>
 {% endif %}
+{% else %}
+<h4><small class="text-muted">No Finished Todos</small></h4>
 {% endfor %}
 </div>
 </body>
