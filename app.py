@@ -109,6 +109,9 @@ def registerattempt():
 	if register_id=='' or register_pass=='':
 		flash("You can't leave any of the fields blank")
 		return redirect('/register')
+	if ' ' in register_id:
+		flash("You can't have a space in your username")
+		return redirect('/register')
 	register_pass_hashed = pbkdf2_sha256.hash(register_pass)
 	if register_id in users:
 		flash('Username already taken')
