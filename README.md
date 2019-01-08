@@ -5,8 +5,8 @@ The site is live on http://sggts04.pythonanywhere.com however it is expected to 
 ## Installation
 For testing, editing or playing around with the code, you can download the app to your local machine:
 ```
-git clone https://github.com/sggts04/flask_todos
-cd flask_todos
+git clone https://github.com/sggts04/flask-todos
+cd flask-todos
 pip install -r requirements.txt
 ```
 Now, edit app.py and set ```app.config['SECRET_KEY'] = "secret_key_here"``` to your own secret key instead of ```secret_key_here```.    
